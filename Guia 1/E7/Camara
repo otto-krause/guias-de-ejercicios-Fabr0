@@ -1,0 +1,24 @@
+using System;
+namespace E7
+{
+    public class Camara
+    {   
+         public int res=0;
+       public int fotos=0;
+
+        public Camara(int res,int fotos)
+        {
+            this.res=res;
+            this.fotos=fotos;
+        }
+
+        public int pesoPorFoto(int res)
+        {
+            return res*3;
+        }
+        public int pesoTotalDeFotos(int res,int fotos)
+        {
+            return pesoPorFoto(res)*fotos;
+        }
+    }
+}
