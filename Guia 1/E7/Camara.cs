@@ -7,31 +7,25 @@ Para la clase celular crear el método TeCargaLaSUBE que devuelve VoF si tiene N
 Crear un celular con dos cámaras en la clase Program y permitirle al usuario utilizar los métodos del celular*/
 namespace Visual.guias_de_ejercicios_Fabr0.Guia_1.E7
 {
-    class Program
+    public class Camara
     {
-        static void Main(string[] args)
-        {
-            int num=0;
-            Celular nokia=new Celular(true,true,5000,5);
-          
-            while (true)
-            {
-                Console.WriteLine("Ingrese el numero para la operacion deseada:\n1-Para ver la memoria disponible\n2-Para ver si la sube esta cargada\n3-Finalizar");
-                num=int.Parse(Console.ReadLine());
-                switch (num)
-                {
-                    case 1:
-                        Console.WriteLine(nokia.MemoriaDisponible());
-                        break;
-                    case 2:
-                        Console.WriteLine(nokia.TeCargaLaSUBE());
-                        break;
-                    case 3:
-                        break;
-                }
-            }
-          
-        }
-    }
-}
+        int res=0;
+        int fotos=0;
 
+        public Camara(int res,int fotos)
+        {
+            this.res=res;
+            this.fotos=fotos;
+        }
+    public int Pesototal(int res)
+    {
+        return res*3000000 ;
+    }
+
+    public int PesoTotalDeFotos(int res,int fotos)
+    {
+        return Pesototal(res)*fotos;
+    }
+    }
+
+}

@@ -1,3 +1,4 @@
+
 using System;
 /*Crear la clase Celular de la que conocemos los atributos: NFC (si o no), Bluethoot (si o no), memoria de almacenamiento (medida en MB), cantidad de aplicaciones, y también sabemos que tiene dos cámaras (frontal y trasera). Para las cámaras crearemos una clase que contenga los atributos resolución en megapixeles y cantidad de fotos.
 Para la clase cámara crear el método pesoPorFoto que calcula cuanto pesa una foto en el teléfono. Para calcular esto sabemos que cada pixel ocupa 3 bytes, y también sabemos que: 1 megapixel = 1.000.000 píxeles.
@@ -7,31 +8,32 @@ Para la clase celular crear el método TeCargaLaSUBE que devuelve VoF si tiene N
 Crear un celular con dos cámaras en la clase Program y permitirle al usuario utilizar los métodos del celular*/
 namespace Visual.guias_de_ejercicios_Fabr0.Guia_1.E7
 {
-    class Program
+    public class Celular
     {
-        static void Main(string[] args)
+        bool nfc,bt;
+        int memoria=0, ap=0;
+        public Celular(bool nfc,bool bt,int memoria,int ap)
         {
-            int num=0;
-            Celular nokia=new Celular(true,true,5000,5);
-          
-            while (true)
-            {
-                Console.WriteLine("Ingrese el numero para la operacion deseada:\n1-Para ver la memoria disponible\n2-Para ver si la sube esta cargada\n3-Finalizar");
-                num=int.Parse(Console.ReadLine());
-                switch (num)
-                {
-                    case 1:
-                        Console.WriteLine(nokia.MemoriaDisponible());
-                        break;
-                    case 2:
-                        Console.WriteLine(nokia.TeCargaLaSUBE());
-                        break;
-                    case 3:
-                        break;
-                }
-            }
-          
+            this.nfc=nfc;
+            this.bt=bt;
+            this.memoria=memoria;
+            this.ap=ap;
+              Camara frontal=new Camara(10,30);
+            Camara trasera=new Camara(15,20);
         }
+
+
+    public int  MemoriaDisponible()
+    {
+        return this.memoria-(this.ap*70+ frontal.PesoTotalDeFotos(frontal.res,frontal.fotos)+trasera.PesoTotalDeFotos(trasera.res,trasera.fotos));
     }
+    public bool TeCargaLaSUBE()
+    {
+        return this.nfc;
+    }
+    }
+  
 }
+
+
 
