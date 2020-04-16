@@ -9,8 +9,8 @@ namespace Visual.guias_de_ejercicios_Fabr0.Guia_1.E7
 {
     public class Camara
     {
-        int res=0;
-        int fotos=0;
+       public int res=0;
+       public int fotos=0;
 
         public Camara(int res,int fotos)
         {

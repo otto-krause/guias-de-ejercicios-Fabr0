@@ -13,7 +13,7 @@ namespace Visual.guias_de_ejercicios_Fabr0.Guia_1.E7
         {
             int num=0;
             Celular nokia=new Celular(true,true,5000,5);
-          
+         
             while (true)
             {
                 Console.WriteLine("Ingrese el numero para la operacion deseada:\n1-Para ver la memoria disponible\n2-Para ver si la sube esta cargada\n3-Finalizar");

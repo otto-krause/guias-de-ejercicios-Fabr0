@@ -12,24 +12,25 @@ namespace Visual.guias_de_ejercicios_Fabr0.Guia_1.E7
     {
         bool nfc,bt;
         int memoria=0, ap=0;
+           Camara frontal=new Camara(10,30);
+            Camara trasera=new Camara(15,20);
         public Celular(bool nfc,bool bt,int memoria,int ap)
         {
             this.nfc=nfc;
             this.bt=bt;
             this.memoria=memoria;
             this.ap=ap;
-              Camara frontal=new Camara(10,30);
-            Camara trasera=new Camara(15,20);
+         
         }
 
 
     public int  MemoriaDisponible()
     {
-        return this.memoria-(this.ap*70+ frontal.PesoTotalDeFotos(frontal.res,frontal.fotos)+trasera.PesoTotalDeFotos(trasera.res,trasera.fotos));
+        return memoria-(this.ap*70+ frontal.PesoTotalDeFotos(frontal.res,frontal.fotos)+trasera.PesoTotalDeFotos(trasera.res,trasera.fotos));
     }
     public bool TeCargaLaSUBE()
     {
-        return this.nfc;
+        return nfc;
     }
     }
   
