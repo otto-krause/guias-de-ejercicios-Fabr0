@@ -1,9 +1,13 @@
 using NUnit.Framework;
-
-namespace Testing
+using ejercicio;
+using System.Collections.Generic;
+namespace testing
 {
+    
     public class Tests
     {
+
+
         [SetUp]
         public void Setup()
         {
