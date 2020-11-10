@@ -6,7 +6,9 @@ namespace Ejercicio
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Ingrese");
+            string palabra= Console.ReadLine();
+            Console.WriteLine(palabra.Length);
         }
     }
 }
